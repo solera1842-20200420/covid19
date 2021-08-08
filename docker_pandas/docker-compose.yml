@@ -1,0 +1,9 @@
+version: '3'
+services:
+  python3-pandas:
+    build: .
+    container_name: 'python3-pandas'
+    working_dir: '/root/src'
+    tty: true
+    volumes:
+      - ${SRC_PATH}:/root/src
