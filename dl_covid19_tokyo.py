@@ -11,13 +11,13 @@ import pandas as pd
 # import seaborn as sns
 
 # データ・セット保存先ディレクトリとファイル名
-data_dir = './data/covid19_tokyo/'
-dataset = '130001_tokyo_covid19_patients.csv'
+DATA_SET = '130001_tokyo_covid19_patients.csv'
 
 # データのダウンロード
 print('データのダウンロード: "https://stopcovid19.metro.tokyo.lg.jp/data/130001_tokyo_covid19_patients.csv"')
-data = 'https://stopcovid19.metro.tokyo.lg.jp/data/130001_tokyo_covid19_patients.csv'
-df = pd.read_csv(data)
+DATA_URL = 'https://stopcovid19.metro.tokyo.lg.jp/data/130001_tokyo_covid19_patients.csv'
+df = pd.read_csv(DATA_URL)
 
 # csvの書き込み
-df.to_csv(data_dir + dataset)
+print('東京都のcovid19の感染情報ダウンロード・'書き込み')
+df.to_csv(DATA_DIR + DATA_SET)
