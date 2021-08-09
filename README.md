@@ -1,7 +1,8 @@
 # solera1842-20200420
 
 Streamlitとplotly、skleranのDockerの実装
-venv)$pwd
+
+'''venv)$pwd
 /data_01/container/docker_streamlit
 (.venv)$ ls
 Dockerfile  docker-compose.yml  requirements.txt  src
@@ -13,6 +14,7 @@ CONTAINER ID   IMAGE                  COMMAND   CREATED         STATUS         P
 
 ホスト側のDockerfileの場所から動かすスクリプトを実行
 (.venv) $ docker exec docker_streamlit streamlit run st_covid19_line_plot.py
+'''
 
 実行後のコンソールからのメッセージ、ホストのブラウザからはlocalhost:8501を開く。
   You can now view your Streamlit app in your browser.
