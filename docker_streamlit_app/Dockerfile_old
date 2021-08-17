@@ -1,0 +1,36 @@
+# Docker streamlity 
+# Base Image: ubuntu 
+FROM ubuntu:20.04 as builder
+
+# pip upgrade
+ENV TERM xterm
+RUN apt-get update && apt-get upgrade -y && apt-get install -y python3-dev python3-pip python3-urllib3 curl
+# RUN apt-get install -y python3-dev python3-pip python3-urllib3 curl
+
+# upgrade pip 
+RUN pip install --upgrade pip && pip install --upgrade setuptools 
+
+# python library
+# RUN pip install -r requirements.txt
+
+# mkdir root/src
+RUN mkdir -p /root/src
+
+# WORKDIR
+WORKDIR /root/src
+
+# ファイルコピー
+COPY requirements.txt /root/src
+COPY src/ /root/src/ 
+
+# python library
+# RUN apt-get update && apt-get upgrade -y && apt-get install -y python3-dev python3-pip python3-urllib3 curl
+RUN pip install -r requirements.txt
+
+# port
+EXPOSE 8501
+
+# python 
+# streamlit
+# CMD ["bash"]
+CMD ["streamlit" ,"run ", "st_covid19_line_plot.py"]

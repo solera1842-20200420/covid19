@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    restart: always 
+    build: .
+    container_name: 'docker_streamlit'
+    working_dir: '/root/src'
+    tty: true 
+    ports: 
+     - "0.0.0.0:8501:8501"
+    volumes:
+     - ${SRC_PATH}:/root/src

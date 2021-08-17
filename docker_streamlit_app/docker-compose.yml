@@ -1,0 +1,12 @@
+version: '3'
+services:
+  plot:
+    restart: always 
+    build: .
+    container_name: 'streamlit_graph'
+    working_dir: '/root/src'
+    tty: true 
+    ports: 
+     - "0.0.0.0:8501:8501"
+    volumes:
+     - ${SRC_PATH}:/root/src
