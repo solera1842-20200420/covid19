@@ -69,6 +69,7 @@ ENTRYPOINT ["streamlit", "run"]
 CMD ["st_covid19_line_plot.py"]
 ```
 2.サブディレクトリ
+
 2-1.グラフ表示スクリプトなしのStreamlitとplotlyのdocker
 Baseイメージ: ubuntu
 ```
