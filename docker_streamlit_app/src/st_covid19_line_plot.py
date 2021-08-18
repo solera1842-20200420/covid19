@@ -15,7 +15,7 @@ import plotly.express as px
 # データ・セットの読み込み
 # 情報源: 厚労省オープンデータ
 
-DATA_DIR = './'
+DATA_DIR = './data/'
 
 # 陽性者数(デイリー)
 DATA = pd.read_csv(os.path.join(DATA_DIR, 'newly_confirmed_cases_daily.csv'))

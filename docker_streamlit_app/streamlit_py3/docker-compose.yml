@@ -1,9 +1,9 @@
 version: '3'
 services:
-  web:
+  streamlit:
     restart: always 
     build: .
-    container_name: 'docker_streamlit'
+    container_name: 'streamlit_py3'
     working_dir: '/root/src'
     tty: true 
     ports: 

@@ -29,6 +29,5 @@ RUN pip install -r requirements.txt
 EXPOSE 8501
 
 # python 
-# CMD ["streamlit", "run", "helloworld.py"]
-# CMD ["streamlit", "run", "st_covid19_line_plot.py"]
-CMD ["bash"]
+ENTRYPOINT ["streamlit", "run"]
+CMD ["st_cluster_events_jp.py"]
