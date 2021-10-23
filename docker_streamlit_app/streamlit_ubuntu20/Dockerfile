@@ -20,8 +20,8 @@ COPY requirements.txt /root/src
 WORKDIR /root/src
 
 # ファイルコピー
-# COPY requirements.txt /root/src 
-COPY src/ /root/src/ 
+COPY requirements.txt /root/src 
+# COPY src/ /root/src/ 
 
 # python library
 RUN pip install -r requirements.txt
@@ -31,3 +31,4 @@ EXPOSE 8501
 
 # python 
 CMD ["bash"]
+
